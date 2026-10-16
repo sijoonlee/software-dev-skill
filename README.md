@@ -16,7 +16,7 @@ Engineering principles for coding agents, one skill per folder. They are a conde
 | `technical-writing` | the `technical-writing` skill (Diátaxis, Google style, STE, and Global English layers), with sentence rules left to `write-plainly` |
 | `typescript-best-practices` | the `typescript-best-practices` skill and its `references/patterns.md`, merged into one file |
 | `create-feature-map` | the feature-map part of create-verification-skill, plus a new "Where it lives in code" section |
-| `update-skill-ground` | the source-reading half of maintain-verification-skill, plus a diff mode that updates only what a change touched |
+| `update-feature-map` | the source-reading half of maintain-verification-skill, plus a diff mode that updates only what a change touched |
 
 ## App layout these skills produce
 

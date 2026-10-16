@@ -15,7 +15,7 @@ It lives in the app's directory, which is the repo root for a single-app repo:
   <feature>.md     # one file per feature area
 ```
 
-If `README.md` already exists, use the **update-skill-ground** skill instead.
+If `README.md` already exists, use the **update-feature-map** skill instead.
 
 ## 1. Inventory features from the user's side
 
@@ -73,4 +73,4 @@ Feature map: `.skill-ground/feature-map/README.md`. Open the file for the featur
 
 Open three files at random. Confirm every path under "Where it lives in code" exists, and that every route or entry point under "How to get to it" exists in the source. Fix what's wrong.
 
-To keep the map current later, use the **update-skill-ground** skill.
+To keep the map current later, use the **update-feature-map** skill.

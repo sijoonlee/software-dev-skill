@@ -1,9 +1,9 @@
 ---
-name: update-skill-ground
+name: update-feature-map
 description: Keep an app's feature map in `.skill-ground/feature-map/` in line with the code. Diff mode updates only what a branch or PR changed. Audit mode checks the whole map. Use after changing user-facing behavior, before opening a PR, or when asked to "update the feature map" or "audit the feature map".
 ---
 
-# Update skill-ground
+# Update feature map
 
 This skill keeps `<app>/.skill-ground/feature-map/` current. The **create-feature-map** skill creates it. If the map doesn't exist, stop and run that skill instead.
 
