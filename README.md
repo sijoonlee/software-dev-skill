@@ -12,9 +12,11 @@ Engineering principles for coding agents, one skill per folder. They are a conde
 | `small-verified-steps` | sequence-verifiable-units, build-the-lever, outcome-oriented-execution |
 | `act-dont-ask` | never-block-on-the-human, the Autonomy section of poteto-mode |
 | `write-plainly` | the `unslop` and `no-comments` skills, the reply rules of poteto-mode |
+| `few-comments` | the code-comment rules from `no-comments`, tightened to comments about behaviour outside the repo |
+| `technical-writing` | the `technical-writing` skill (Diátaxis, Google style, STE, and Global English layers), with sentence rules left to `write-plainly` |
+| `typescript-best-practices` | the `typescript-best-practices` skill and its `references/patterns.md`, merged into one file |
 | `create-feature-map` | the feature-map part of create-verification-skill, plus a new "Where it lives in code" section |
-| `create-verification-skill` | create-verification-skill |
-| `update-skill-ground` | maintain-verification-skill, plus a diff mode that updates only what a change touched |
+| `update-skill-ground` | the source-reading half of maintain-verification-skill, plus a diff mode that updates only what a change touched |
 
 ## App layout these skills produce
 
@@ -22,8 +24,6 @@ Engineering principles for coding agents, one skill per folder. They are a conde
 <app>/                                # repo root for a single-app repo
   .skill-ground/
     feature-map/README.md, <feature>.md
-    verify/SKILL.md
-  .claude/skills/verify-<app> -> ../../.skill-ground/verify
   CLAUDE.md                           # one line pointing at the feature map
 ```
 
