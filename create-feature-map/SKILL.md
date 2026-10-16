@@ -48,8 +48,8 @@ Where the user starts and what they click, type, or call. Include every entry po
 - `path/to/component-or-handler`: main logic.
 - `path/to/api-or-service`: backend it calls.
 
-## Driving it
-(Optional. Filled in by the verify skill.) Commands, selectors, and the observable end state that proves it works.
+## Tests
+Existing specs that cover it: unit, component, or end-to-end. Write "none" when there are none.
 
 ## Gotchas
 What misleads an agent: feature flags, account or plan state it needs, async loading, A/B variants, parts that can't be automated.

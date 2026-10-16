@@ -1,6 +1,6 @@
 ---
 name: write-plainly
-description: Apply to any prose for people, including replies, PR descriptions, commit messages, docs, and code comments. Write short concrete sentences without AI tells, and keep code comments only for a non-obvious why.
+description: Apply to any prose for people, including replies, PR descriptions, commit messages, docs, and code comments. Write short concrete sentences without AI tells, and leave code comments to the `few-comments` skill.
 ---
 
 # Write plainly
@@ -27,6 +27,4 @@ description: Apply to any prose for people, including replies, PR descriptions, 
 - Never invent a link, citation, or result.
 
 **Code comments**
-- Write a comment only for a non-obvious *why* that the code can't show.
-- Don't narrate what the code does, describe history ("changed from X"), or label steps ("// Step 1").
-- If a workaround needs a long comment to justify it, fix the code instead.
+- Follow the `few-comments` skill. It allows a comment only for behaviour outside the repo.
