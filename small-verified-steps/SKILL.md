@@ -1,9 +1,11 @@
 ---
 name: small-verified-steps
-description: Apply to multi-step work such as migrations, sweeps, runs of similar edits, or a refactor, and when organizing commits and PRs. Work in small units that each end in a check, and order commits so they tell the story of the change.
+description: Apply when work takes more than one step, such as a migration, a sweep of similar edits, or a multi-file refactor, and when organizing commits. Do one change at a time, check it before the next, and order commits so they explain the change. For what the finished code should look like, use smallest-change.
 ---
 
 # Small verified steps
+
+This skill is about the order of work. What the finished code should look like is **smallest-change**.
 
 Break the work into small units. Each unit ends in a state you can check. Don't start the next unit until the current one passes.
 
@@ -13,9 +15,10 @@ Break the work into small units. Each unit ends in a state you can check. Don't 
 - When a change repeats across many places, write a script or codemod after doing the first one by hand. Check the script against your hand-made version, then run it on the rest. A reviewer can rerun the script instead of rechecking every edit.
 - Run the check for each unit even when it seems obvious.
 
-**When delivering**
-- Order commits so the history explains the change. Typical orders are a failing test then the fix, a removal then the reshape, or setup then the feature.
-- Each commit should build and pass on its own.
-- Keep each commit to one purpose. Split unrelated cleanups into their own commits.
+**Breaking things on the way**
+In a migration you may leave intermediate states broken on purpose, rather than writing temporary code to keep every step working. Say which steps are broken and why, keep the checks for the code you're touching, and run every check at the end.
 
-**Planned breakage.** In a planned migration you may break intermediate states on purpose, instead of writing throwaway compatibility code. Say where things are broken, and fully verify everything at the end.
+**When delivering**
+- Order commits so the history explains the change: a failing test, then the fix, or the removals smallest-change asks for, then the new code, or setup, then the feature.
+- Each commit should build and pass on its own, unless it's part of a planned broken stretch.
+- Keep each commit to one purpose. Split unrelated cleanups into their own commits.
