@@ -8,7 +8,7 @@ The purpose is not to remove human responsibility. It is to make sure a human sp
 
 ## One-time project setup
 
-Keep two short files at the repository root.
+Keep a short `AGENTS.md` file at the repository root.
 
 ### `AGENTS.md`
 
@@ -19,17 +19,6 @@ Document only what an agent needs to work safely:
 - architectural conventions and important boundaries;
 - paths that are risky or must not be changed casually;
 - how to test UI changes and where screenshots belong.
-
-### `REVIEW.md`
-
-Record the team's most useful review rules:
-
-- what failures look like in this repository;
-- security, data-loss, and backwards-compatibility concerns;
-- areas that always need a human review, such as authentication, billing, migrations, CI, deployment, permissions, and secrets;
-- a rule to report only actionable, introduced issues with file-and-line evidence.
-
-Keep both files brief. Add a rule only after it has repeatedly mattered in a real review or incident.
 
 ## The daily task
 
@@ -102,7 +91,7 @@ Use a second agent/session that did not implement the task. Give it:
 
 - the original task and acceptance criteria;
 - the diff;
-- `AGENTS.md` and `REVIEW.md`;
+- `AGENTS.md`;
 - the verification note and any screenshot.
 
 Use this review prompt:
@@ -154,7 +143,7 @@ When a bug, revert, or noisy review comment happens, ask which layer should have
 
 - add a focused test;
 - add or adjust a lint/type rule;
-- clarify `AGENTS.md` or `REVIEW.md`;
+- clarify `AGENTS.md`;
 - improve the implementation or review prompt;
 - reclassify the area as higher risk.
 

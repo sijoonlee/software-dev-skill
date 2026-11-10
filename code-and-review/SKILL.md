@@ -7,7 +7,7 @@ description: Implement and review a local code change with evidence, risk-based 
 
 Use this workflow to produce a small, verified change and a reviewer-ready PR description. The goal is to move routine checking before human review while preserving human ownership of risk and merge decisions.
 
-Read `AGENTS.md` and `REVIEW.md` when they exist. Use the repository's `PR_TEMPLATE.md` to draft the PR description.
+Read `AGENTS.md` when it exists. Use the repository's `PR_TEMPLATE.md` to draft the PR description.
 
 ## 1. Define the task contract
 
