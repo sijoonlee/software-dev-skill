@@ -1,3 +1,6 @@
+<!-- Write the ticket number inside of brakets whenever it's available -->
+JIRA: [ticket-number]
+
 ## Intent
 
 <!-- What problem does this solve? Link the task or issue when available. -->
@@ -39,6 +42,10 @@
 Potential failure:
 
 Rollback:
+
+## Needs human attention
+
+<!-- Unresolved review findings after three rounds, failed or unavailable checks, and open decisions. For each, say what is wrong, why it was not resolved, and what the human should decide. Write "None" when there is nothing. -->
 
 ## Reviewer notes
 

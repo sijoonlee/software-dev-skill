@@ -1,5 +1,6 @@
 ---
 name: code-and-review
+disable-model-invocation: true
 description: Implement and review a local code change with evidence, risk-based delegation, and a PR description. Use when a task should be completed through an implementation-and-review workflow before a human merge decision.
 ---
 
@@ -7,7 +8,7 @@ description: Implement and review a local code change with evidence, risk-based 
 
 Use this workflow to produce a small, verified change and a reviewer-ready PR description. The goal is to move routine checking before human review while preserving human ownership of risk and merge decisions.
 
-Read `AGENTS.md` when it exists. Use the repository's `PR_TEMPLATE.md` to draft the PR description.
+Read `AGENTS.md` when it exists. Draft the PR description from `PR_TEMPLATE.md` in this skill's directory.
 
 ## 1. Define the task contract
 
@@ -61,21 +62,22 @@ The reviewer reports only introduced, actionable findings. Each finding must inc
 
 The main agent decides whether a finding is valid. Valid findings are fixed and the affected verification reruns. Record a short reason for rejected findings.
 
-After the first review round, re-review only the follow-up diff unless the task changed materially. Cap the process at three review rounds. If it does not converge, stop and ask a human to reconsider the approach rather than letting agents churn.
+After the first review round, re-review only the follow-up diff unless the task changed materially. Cap the process at three review rounds. If it does not converge, stop the rounds rather than letting agents churn. Do not ask the human. Record the unresolved findings in the PR description's "Needs human attention" section instead: what is still wrong, why the rounds did not resolve it, and what the human should decide.
 
 ## 6. Draft the PR description
 
-Fill every applicable section of `PR_TEMPLATE.md` from the task contract and actual evidence:
+Fill every applicable section of this skill's `PR_TEMPLATE.md` from the task contract and actual evidence:
 
 - intent and reviewer-oriented summary;
 - commands run, outcomes, and UI artifacts;
 - fresh-context review result and finding resolutions;
 - one selected risk level with a short rationale;
 - likely failure mode and a concrete rollback path;
-- reviewer notes for medium/high-risk changes.
+- reviewer notes for medium/high-risk changes;
+- needs human attention: unresolved review findings, failed or unavailable checks, and open decisions. Write "None" when there are none.
 
-Draft the description locally. Do not create, submit, or merge a remote PR unless the user explicitly requests that external action.
+Then push the branch and open the PR without asking the human. The PR is the bridge between the agent and the human, so everything the human needs to judge the change goes in its description. Never merge the PR.
 
 ## 7. Human handoff
 
-Present the final diff, PR description, unresolved limitations, and recommended human review depth. The person directing the change owns the outcome, regardless of whether an agent wrote the code.
+Give the human the PR link and the recommended review depth. If the "Needs human attention" section is not "None", tell the human to read that section first. The person directing the change owns the outcome, regardless of whether an agent wrote the code.
