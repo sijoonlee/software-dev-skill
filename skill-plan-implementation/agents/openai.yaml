@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan Implementation"
+  short_description: "Turn a design into dependency-ordered implementation tasks"
+  default_prompt: "Use $plan-implementation to turn the egm-draft design files into a feature-based implementation plan, resolving shared dependencies first."
