@@ -1,0 +1,4 @@
+interface:
+  display_name: "EGM Draft HTML"
+  short_description: "Turn design drafts into layered HTML decision guides"
+  default_prompt: "Use $egm-draft-html to turn this EGM draft into an HTML guide with major decisions first and links to supporting choices."
